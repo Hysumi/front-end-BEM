@@ -1,0 +1,13 @@
+@import './logo/logo.scss';
+
+header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    -webkit-box-shadow:  0px 0px 5px rgba(204, 204, 204, 0.6);
+    box-shadow: 0px 0px 5px rgba(204, 204, 204, 0.6);
+}
