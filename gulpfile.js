@@ -15,6 +15,8 @@ var changed = require("gulp-changed");
 var SCSS_SRC = "./src/bundles/css-bundle/*.scss";
 var SCSS_DEST = "./src/bundles/css-bundle/";
 
+var SCSS_SRC_COMMON = "./src/common.blocks/**/*.scss";
+
 /*
  * Compile SCSS
  */
@@ -32,7 +34,7 @@ gulp.task("compile_scss", function () {
  */
 
 gulp.task("watch_scss", function () {
-    gulp.watch([SCSS_SRC], ["compile_scss"]);
+    gulp.watch([SCSS_SRC, SCSS_SRC_COMMON], ["compile_scss"]);
 });
 
 /*
