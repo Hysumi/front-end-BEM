@@ -1,0 +1,24 @@
+footer {
+    width: 100%;
+    padding: .5em 0;
+    background-color: rgb(172, 98, 2);
+}
+
+.footer_copyrights_mobile {
+    text-align: center;
+    font-size: 10px;
+    color: white;
+}
+.footer_copyrights_text {
+    margin-bottom: 0.5em;
+}
+.footer_copyrights_message {
+    display: inline-block;
+}
+.footer_copyrights_heart:before {
+    content:'\2665';
+    opacity: 0.5;
+}
+.footer_copyrights_copyrights:before {
+    content:"\00a9";
+}
