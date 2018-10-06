@@ -1,8 +1,33 @@
 $socialColorBackground: white;
+$paymentCardsBackground: white;
 $darkBrown:rgb(172, 98, 2);
 
 footer {
     width: 100%;
+}
+.teste
+{
+    background: white;
+    width: 30px;
+    height: 30px;;
+}
+
+.footer_cards_mobile {
+    padding: .5em 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: $darkBrown;
+}
+
+.footer_card_container {
+    display: inline-block;
+    margin: 0 0.5em;
+    background-color: $socialColorBackground;
+    width: 70px;
+    border-radius: 3px;
+    .footer_card_icon {
+        padding-top: 5px;
+    }
 }
 
 .footer_social_mobile {
@@ -30,7 +55,7 @@ footer {
     background-color: $darkBrown;
 }
 .footer_copyrights_text {
-    padding: 0.5em 0;
+    padding-top: 0.25em;
 }
 .footer_copyrights_message {
     display: inline-block;
@@ -41,4 +66,7 @@ footer {
 }
 .footer_copyrights_copyrights:before {
     content:"\00a9";
+}
+.footer_icons_copyrights {
+    padding-top: 1em;
 }
