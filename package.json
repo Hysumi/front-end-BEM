@@ -13,6 +13,6 @@
         "yarn": "^1.9.2"
     },
     "scripts": {
-        "serve": "browser-sync start --server --files \"src/bundles/css-bundle/*.css\" "
+        "serve": "browser-sync start --server --files \"src/bundles/css-bundle/*.css\", \"./index.html\" "
     }
 }
