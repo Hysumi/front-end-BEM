@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "browser-sync": "^2.18.8",
         "gulp": "^3.9.1",
         "gulp-changed": "^3.2.0",
         "gulp-clean-css": "^3.9.4",
@@ -11,5 +12,7 @@
         "gulp-uglify": "^3.0.0",
         "yarn": "^1.9.2"
     },
-    "scripts": {}
+    "scripts": {
+        "serve": "browser-sync start --server --files \"src/bundles/css-bundle/*.css\" "
+    }
 }
