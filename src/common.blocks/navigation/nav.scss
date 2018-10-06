@@ -40,8 +40,7 @@
     text-align: center;
 }
 
-.nav-bar__list,
-[id^="toggle"] {
+.nav-bar__list, [id^="toggle"] {
     display: none;
 }
 
@@ -50,7 +49,9 @@
 }
 
 .nav-bar__item {
-    display: inline-block;
+    display: inline-block;    
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .nav-bar__list-item {
     display: block;
@@ -74,13 +75,17 @@
     background: #666;
 }
 
-@media all and (min-width : 745px) {
+@media all and (min-width : 815px) {
+    .nav-bar {
+        text-align: center;
+    }
     .nav-bar > .nav-bar__label {
         display: none;
     }
 
     .nav-bar > .nav-bar__list {
-        display: block;
+        display: inline-block;
+        width: auto;
     }
 
     .nav-bar > .nav-bar__list > .nav-bar__list-item {
