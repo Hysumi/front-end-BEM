@@ -5,7 +5,8 @@ $brown:rgb(199, 118, 13);
 $lightBrown: rgb(255, 166, 0);
 
 .footer_copyrights,
-.footer_navigation {
+.footer_navigation,
+.footer_contact {
     display: none;
 }
 
@@ -28,16 +29,16 @@ $lightBrown: rgb(255, 166, 0);
     display: inline-block;
     text-align: center;
 }
-.footer_contact_grid {
+.footer_contact_mobile_grid {
     display: grid;
     column-gap: 10px;
-    grid-template-columns: 155px 50px 55px 70px;
+    grid-template-columns: 165px 50px 55px 70px;
 }
 
 .footer_contact_button_horizontal_grid {
     display: grid;
     column-gap: 10px;
-    grid-template-columns: 20px 120px;
+    grid-template-columns: 30px 120px;
     color: white;
 }
 
@@ -100,6 +101,9 @@ $lightBrown: rgb(255, 166, 0);
 .footer_contact_phone_text {
     text-align: start;
 }
+.footer_contact_phone_text_title {
+    text-decoration: underline;
+} 
 .footer_navigation_mobile {
     background-color: $brown;
 }
@@ -190,21 +194,31 @@ $lightBrown: rgb(255, 166, 0);
         display: none;
     }
 
-    .footer_copyrights{
+    .footer_copyrights {
         display: block;
         width: 100%;
     }
 
-    .footer_navigation {
+    .footer_contact, .footer_navigation {
         display: inline-block;
-        width: 100%;
-        background-color: $brown;
         text-align: center;
+        width: 100%;
     }
+
+    .footer_contact {
+        background-color: $lightBrown;
+        padding: .5em;
+    }
+    .footer_navigation {
+        background-color: $brown;
+        border-bottom: thin rgba(255,255,255, 0.5) solid;
+    }
+
     .footer_navigation_list {
         list-style: none;
         display: inline-block;
     }
+
     .footer_navigation_list > li {
         text-align: left;
         padding-bottom: 5px
