@@ -29,7 +29,7 @@ $navbarColor: rgb(199, 118, 13);
 }
 
 .nav-bar__label::after{
-    content: " +";
+    content: ' +';
 }
 
 .nav-bar__list {
@@ -41,11 +41,11 @@ $navbarColor: rgb(199, 118, 13);
     text-align: center;
 }
 
-.nav-bar__list, [id^="toggle"] {
+.nav-bar__list, [id^='toggle'] {
     display: none;
 }
 
-[id^="toggle"]:checked + .nav-bar__list {
+[id^='toggle']:checked + .nav-bar__list {
     display: inline-block;
 }
 

@@ -83,7 +83,7 @@ header {
         content: attr(button-text);
     }
     .header__button-text-right[button-text]::after  {
-        content: "";
+        content: '';
     }
 
     .header__button_phone {

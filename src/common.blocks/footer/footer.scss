@@ -4,7 +4,8 @@ $darkBrown:rgb(153, 88, 4);
 $brown:rgb(199, 118, 13);
 $lightBrown: rgb(255, 166, 0);
 
-.footer_copyrights {
+.footer_copyrights,
+.footer_navigation {
     display: none;
 }
 
@@ -85,7 +86,7 @@ $lightBrown: rgb(255, 166, 0);
     color: white;
 }
 .footer_navigation_text:before {
-    content: "| "
+    content: '| '
 }
 
 .footer_cards_mobile {
@@ -137,7 +138,7 @@ $lightBrown: rgb(255, 166, 0);
     opacity: 0.5;
 }
 .footer_copyrights_copyrights:before {
-    content:"\00a9";
+    content:'\00a9';
 }
 .footer_icons_copyrights {
     padding-top: 1em;
@@ -159,16 +160,39 @@ $lightBrown: rgb(255, 166, 0);
         display: none;
     }
 
-
-
-
-
-
-
-
-    .footer_copyrights {
+    .footer_copyrights{
         display: block;
         width: 100%;
+    }
+
+    .footer_navigation {
+        display: inline-block;
+        width: 100%;
+        background-color: $brown;
+        text-align: center;
+    }
+    .footer_navigation_list {
+        list-style: none;
+        display: inline-block;
+    }
+    .footer_navigation_list > li {
+        text-align: left;
+        padding-bottom: 5px
+    }
+
+    .footer_navigation_list_header {
+        color: white;
+        font-weight: bold;
+        font: 1em 'Oswald', sans-serif;
+        margin: 0; 
+    }
+    .footer_navigation_list_item {
+        font: 0.6em 'Open Sans', sans-serif;
+        text-decoration: none;
+        color: white;
+        &:visited {
+            color: lightseagreen;
+        }
     }
 
     .footer_copyrights {
