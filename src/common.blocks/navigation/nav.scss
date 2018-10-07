@@ -1,8 +1,9 @@
+$navbarColor: rgb(199, 118, 13);
 .nav-bar {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: rgb(172, 98, 2);
+    background-color: $navbarColor;
     top: 0;
     height: 38px;
     position: -webkit-sticky;
@@ -32,7 +33,7 @@
 }
 
 .nav-bar__list {
-    background-color: rgb(172, 98, 2);
+    background-color: $navbarColor;
     list-style: none;
     margin: 0;
     padding: 0;

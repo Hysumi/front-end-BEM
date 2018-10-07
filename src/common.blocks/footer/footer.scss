@@ -1,21 +1,37 @@
 $socialColorBackground: white;
 $paymentCardsBackground: white;
-$darkBrown:rgb(172, 98, 2);
+$darkBrown:rgb(153, 88, 4);
+$brown:rgb(199, 118, 13);
 
 footer {
     width: 100%;
 }
-.teste
-{
-    background: white;
-    width: 30px;
-    height: 30px;;
+
+.footer_navigation_mobile {
+    background-color: $brown;
+    padding: 0.5em 0;
+    width: 100%;
+}
+
+
+.footer_navigation_container {
+    padding: 0 1em;
+    text-align: center;
+}
+
+.footer_navigation_text,
+.footer_navigation_firstText {
+    display: inline;
+    text-decoration: none;
+    color: white;
+}
+.footer_navigation_text:before {
+    content: "| "
 }
 
 .footer_cards_mobile {
     padding: .5em 0;
     text-align: center;
-    overflow: hidden;
     background-color: $darkBrown;
 }
 
@@ -69,4 +85,9 @@ footer {
 }
 .footer_icons_copyrights {
     padding-top: 1em;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    padding-bottom: 0.5em;
 }
