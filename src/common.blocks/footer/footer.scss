@@ -34,7 +34,7 @@ $lightBrown: rgb(255, 166, 0);
 .footer_contact_mobile_grid {
     display: grid;
     column-gap: 10px;
-    grid-template-columns: 165px 50px 55px 70px;
+    grid-template-columns: 135px 50px 55px 70px;
 }
 
 .footer_contact_button_horizontal_grid {
@@ -100,7 +100,7 @@ $lightBrown: rgb(255, 166, 0);
 .footer_contact_phone_text_container {
     margin-left: 5px;
 }
-.footer_contact_phone_text {
+.footer_contact_text {
     text-align: start;
 }
 .footer_contact_phone_text_title {
@@ -208,7 +208,7 @@ $lightBrown: rgb(255, 166, 0);
     .footer_contact {
         background-color: $lightBrown;
     }
-    .footer_contact_phone_text {
+    .footer_contact_text {
         font-size: 9px;
     }
     .footer_navigation {
@@ -310,5 +310,30 @@ $lightBrown: rgb(255, 166, 0);
     }
     .footer_cards {
         display: inline-block;
+    }
+}
+
+@media all and (max-width : 390px) {
+    .footer_contact_icon {
+        height: 20px;
+        width: 20px;
+    }
+    .footer_contact_text {
+        font-size: 8px;
+    }
+
+    .footer_contact_text_online:before,
+    .footer_contact_text_offline:before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin-right: 3px;
+        -moz-border-radius: 7.5px;
+        -webkit-border-radius: 7.5px;
+        border-radius: 7.5px;
+    }
+    .footer_contact_mobile_grid {
+        column-gap: 0;
     }
 }
