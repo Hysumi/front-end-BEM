@@ -35,8 +35,8 @@ header {
 }
 
 .header__button, 
-.header__button-text-left,
-.header__button-text-right {
+.header__button_text_left,
+.header__button_text-right {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,42 +47,42 @@ header {
 }
 
 .header__button-position-right, 
-.header__button-position-left{
+.header__button-position_left{
     border: none;
 }
 
-.header__button-position-left {
+.header__button-position_left {
     float: left;
     border-right: thin solid silver;
 }
 
 .header__button-position-right {
     float: right;
-    border-left: thin solid silver;
+    border_left: thin solid silver;
 }
 
-.header__button-text-left[button-text-mobile]::after,
-.header__button-text-right[button-text-mobile]::after {
-    content: attr(button-text-mobile);
+.header__button_text_left[button_text-mobile]::after,
+.header__button_text-right[button_text-mobile]::after {
+    content: attr(button_text-mobile);
 }
 
 @media all and (min-width : 768px) {
     .header__button, 
-    .header__button-text-left,
-    .header__button-text-right{
+    .header__button_text_left,
+    .header__button_text-right{
         display: flex;
         flex-direction: row;
         align-items: center;
     }
     
-    .header__button-text-left[button-text]::after {
-        content: attr(button-text);
+    .header__button_text_left[button_text]::after {
+        content: attr(button_text);
     }
 
-    .header__button-text-right[button-text]::before  {
-        content: attr(button-text);
+    .header__button_text-right[button_text]::before  {
+        content: attr(button_text);
     }
-    .header__button-text-right[button-text]::after  {
+    .header__button_text-right[button_text]::after  {
         content: '';
     }
 
