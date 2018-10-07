@@ -2,17 +2,72 @@ $socialColorBackground: white;
 $paymentCardsBackground: white;
 $darkBrown:rgb(153, 88, 4);
 $brown:rgb(199, 118, 13);
+$lightBrown: rgb(255, 166, 0);
 
-footer {
+.footer_contact_mobile,
+.footer_navigation_mobile,
+.footer_cards_mobile,
+.footer_social_mobile,
+.footer_copyrights_mobile, {
     width: 100%;
+    padding: 0.5em 0;
+    text-align: center;
 }
 
+.footer_contact_mobile {
+    background-color: $lightBrown;
+}
+
+.footer_contact_button-container{
+    display: inline-block;
+}
+
+.footer_contact_button {
+    background: none;
+    border: none;
+}
+
+.footer_contact_icon {
+    height: 20px;
+    width: 20px;
+}
+
+.footer_contact_text {
+    font-size: 10px;
+}
+
+.footer_contact_text_online:before,
+.footer_contact_text_offline:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+}
+
+.footer_contact_text_online:before {
+    background-color: green;
+}
+.footer_contact_text_offline:before {
+    background-color: red;
+}
+.footer_contact_phone-container {
+    display: flex;
+    flex-direction: row;
+    text-align: initial;
+}
+.footer_contact_phone_text-container {
+    margin-left: 5px;
+}
+.footer_contact_phone-text {
+    text-align: start;
+}
 .footer_navigation_mobile {
     background-color: $brown;
-    padding: 0.5em 0;
-    width: 100%;
 }
-
 
 .footer_navigation_container {
     padding: 0 1em;
@@ -30,8 +85,6 @@ footer {
 }
 
 .footer_cards_mobile {
-    padding: .5em 0;
-    text-align: center;
     background-color: $darkBrown;
 }
 
@@ -47,7 +100,6 @@ footer {
 }
 
 .footer_social_mobile {
-    text-align: center;
     overflow: hidden;
     background-color: $darkBrown;
     border-bottom: thin rgba(255,255,255, 0.5) solid;
@@ -61,11 +113,11 @@ footer {
         background-color: $socialColorBackground;
         fill: $darkBrown;
         border-radius: 20px;
+        margin: 0 0.25em;
     }
 }
 
 .footer_copyrights_mobile {
-    text-align: center;
     font-size: 10px;
     color: white;
     background-color: $darkBrown;
