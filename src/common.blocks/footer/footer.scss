@@ -4,9 +4,10 @@ $darkBrown:rgb(153, 88, 4);
 $brown:rgb(199, 118, 13);
 $lightBrown: rgb(255, 166, 0);
 
-.footer_copyrights,
+.footer_contact,
 .footer_navigation,
-.footer_contact {
+.footer_social,
+.footer_copyrights{
     display: none;
 }
 
@@ -25,7 +26,8 @@ $lightBrown: rgb(255, 166, 0);
     text-align: center;
 }
 
-.footer_contact_container {
+.footer_contact_container,
+.footer_social_container {
     display: inline-block;
     text-align: center;
 }
@@ -38,7 +40,7 @@ $lightBrown: rgb(255, 166, 0);
 .footer_contact_button_horizontal_grid {
     display: grid;
     column-gap: 10px;
-    grid-template-columns: 30px 120px;
+    grid-template-columns: 30px 130px;
     color: white;
 }
 
@@ -102,6 +104,8 @@ $lightBrown: rgb(255, 166, 0);
     text-align: start;
 }
 .footer_contact_phone_text_title {
+    text-align: start;
+    font-size: 14px;
     text-decoration: underline;
 } 
 .footer_navigation_mobile {
@@ -194,26 +198,23 @@ $lightBrown: rgb(255, 166, 0);
         display: none;
     }
 
-    .footer_copyrights {
-        display: block;
-        width: 100%;
-    }
-
-    .footer_contact, .footer_navigation {
+    .footer_contact, .footer_navigation, .footer_social {
         display: inline-block;
         text-align: center;
         width: 100%;
+        padding: 0.75em 0.5em;
     }
 
     .footer_contact {
         background-color: $lightBrown;
-        padding: .5em;
+    }
+    .footer_contact_phone_text {
+        font-size: 9px;
     }
     .footer_navigation {
         background-color: $brown;
         border-bottom: thin rgba(255,255,255, 0.5) solid;
     }
-
     .footer_navigation_list {
         list-style: none;
         display: inline-block;
@@ -239,12 +240,69 @@ $lightBrown: rgb(255, 166, 0);
         }
     }
 
+    .footer_social{
+        background-color: $brown;
+    }
+
+    .footer_social_grid {
+        display: grid;
+        grid-template-columns: 260px;
+        grid-gap: 10px;
+        color: white;
+        & a{
+            text-decoration: none;
+        }
+        & svg {
+            fill: white;
+            margin: 0;
+        }
+    }
+    .footer_social_container_icons{
+        display: inline-block;
+        text-align: start;
+    }
+
+    .footer_social_title {
+        text-align: start;
+    }
+
+    .footer_social_facebook_likes {
+        line-height: 2.5;
+    }
+    .footer_social_grid_prize {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 10px;
+        color: white;
+        grid-template-columns: 50px 150px;
+        grid-template-areas:
+        "header header"
+        "icon content";
+    }
+    .footer_social_grid_header {
+        grid-area: header;
+        text-align: start;
+    }
+    
+    .footer_social_grid_icon {
+        grid-area: icon;
+    }
+  
+    .footer-social_grid_content {
+        grid-area: content;
+        position: relative;
+        line-height: 3;
+    }
+  
+
     .footer_copyrights {
         font-size: 10px;
         color: white;
         background-color: $darkBrown;
-        padding: 0.5em;
         text-align: center;
+        display: block;
+        width: 100%;
+        padding: 1em 0.5em;
     }
     .footer_copyrights_text {
         display: inline-block;
