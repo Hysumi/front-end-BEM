@@ -2,3 +2,53 @@
     display: flex;
     flex-direction: column;
 }
+
+.page_title_section,
+.page_register_content {
+    margin: 15px;
+}
+
+.page_register_section {
+    background-color: rgba(240, 240, 240, 0.7);
+}
+
+
+.page_register_steps {
+    counter-reset: section;
+}
+
+.page_register_list {
+    list-style: none;
+    margin: 0;
+    margin-left: 4em;
+    padding: 0;
+    counter-reset: li-counter;
+}
+.page_register_list > li{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 1.5em;
+    min-height: 3em;
+    padding-top: 20px;
+}
+.page_register_list > li:before {
+    position: absolute;
+    top: 0;
+    left: -1.33em;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2.5em;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+    border: thin solid #c5c5c5;
+    border-radius: 50%;
+    background-color: rgba(240, 240, 240, 0.7);
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+
+.page_register_item_content {
+    display: inline-block;
+    font-weight: bold;
+}
