@@ -19,7 +19,7 @@
 
 ```sh
 # Clone o repositório
-git clone https://github.com/Hysumi/front-end-BEM.git
+git clone https://github.com/Hysumi/front-end-project.git
 
 # Instale as dependencias.
 npm install
