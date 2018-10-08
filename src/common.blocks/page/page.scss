@@ -3,7 +3,11 @@
     //flex-direction: column;
 }
 
-.page_title_section,
+.page_title_section {
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
 .page_register_content {
     margin: 15px;
 }
@@ -180,6 +184,7 @@ select::-ms-expand {
 .page_register_form .message {
     margin: 15px 0 0;
     font-size: 12px;
+    text-align: center;
 }
 .page_register_form .message a {
     color: #4CAF50;
@@ -189,5 +194,25 @@ select::-ms-expand {
 @media all and (max-width : 330px) {
     .page_register_form_select_major{
         width: 64%;
+    }
+}
+
+@media all and (min-width : 768px) {
+    .page_title_section {    
+        padding: 0px 6em;
+        max-width: 600px;
+        margin: 0 auto 0 0;
+    }
+    .page_register_section {
+        display: flex;
+        padding: 0 2.5em;
+    }
+    .page_register_form_container {
+        transform: translateY(50%);
+        margin: 0 auto;
+    }
+
+    .page_register_form_title {
+        font-size: 12px;
     }
 }
