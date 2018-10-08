@@ -276,8 +276,8 @@ $lightBrown: rgb(255, 166, 0);
         color: white;
         grid-template-columns: 50px 150px;
         grid-template-areas:
-        "header header"
-        "icon content";
+        'header header'
+        'icon content';
     }
     .footer_social_grid_header {
         grid-area: header;
