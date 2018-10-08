@@ -1,8 +1,4 @@
-$socialColorBackground: white;
-$paymentCardsBackground: white;
-$darkBrown:rgb(153, 88, 4);
-$brown:rgb(199, 118, 13);
-$lightBrown: rgb(255, 166, 0);
+@import '../config/_config.scss';
 
 .footer_contact,
 .footer_navigation,
@@ -23,7 +19,7 @@ $lightBrown: rgb(255, 166, 0);
 }
 
 .footer_contact_mobile {
-    background-color: $lightBrown;
+    background-color: $light;
     text-align: center;
 }
 
@@ -42,7 +38,7 @@ $lightBrown: rgb(255, 166, 0);
     display: grid;
     column-gap: 10px;
     grid-template-columns: 30px 130px;
-    color: white;
+    color: $darkBrown;
 }
 
 .footer_contact_button_horizontal_img{
@@ -55,7 +51,7 @@ $lightBrown: rgb(255, 166, 0);
     display: grid;
     column-gap: 10px;
     grid-template-columns: 50px;
-    color: white;
+    color: $darkBrown;
 }
 .footer_contact_button_container{
     display: inline-block;
@@ -110,7 +106,7 @@ $lightBrown: rgb(255, 166, 0);
     text-decoration: underline;
 } 
 .footer_navigation_mobile {
-    background-color: $brown;
+    background-color: $main;
 }
 
 .footer_navigation_container {
@@ -122,7 +118,7 @@ $lightBrown: rgb(255, 166, 0);
 .footer_navigation_firstText {
     display: inline;
     text-decoration: none;
-    color: white;
+    color: $darkBrown;
 }
 .footer_navigation_text:before {
     content: '| '
@@ -163,7 +159,7 @@ $lightBrown: rgb(255, 166, 0);
 
 .footer_copyrights_mobile {
     font-size: 10px;
-    color: white;
+    color: $light;
     background-color: $darkBrown;
 }
 .footer_copyrights_text {
@@ -183,7 +179,7 @@ $lightBrown: rgb(255, 166, 0);
     padding-top: 1em;
     a {
         text-decoration: none;
-        color: white;
+        color: $light;
     }
     padding-bottom: 0.5em;
 }
@@ -207,13 +203,13 @@ $lightBrown: rgb(255, 166, 0);
     }
 
     .footer_contact {
-        background-color: $lightBrown;
+        background-color: $light;
     }
     .footer_contact_text {
         font-size: 9px;
     }
     .footer_navigation {
-        background-color: $brown;
+        background-color: $main;
         border-bottom: thin rgba(255,255,255, 0.5) solid;
     }
     .footer_navigation_list {
@@ -237,12 +233,12 @@ $lightBrown: rgb(255, 166, 0);
         text-decoration: none;
         color: white;
         &:visited {
-            color: lightseagreen;
+            color: $darkBrown;
         }
     }
 
     .footer_social{
-        background-color: $brown;
+        background-color: $main;
     }
 
     .footer_social_grid {
@@ -254,7 +250,7 @@ $lightBrown: rgb(255, 166, 0);
             text-decoration: none;
         }
         & svg {
-            fill: white;
+            fill: $darkBrown;
             margin: 0;
         }
     }
@@ -269,6 +265,7 @@ $lightBrown: rgb(255, 166, 0);
 
     .footer_social_facebook_likes {
         line-height: 2.5;
+        color: white;
     }
     .footer_social_grid_prize {
         display: grid;
@@ -298,7 +295,7 @@ $lightBrown: rgb(255, 166, 0);
 
     .footer_copyrights {
         font-size: 10px;
-        color: white;
+        color: $light;
         background-color: $darkBrown;
         text-align: center;
         display: block;

@@ -1,3 +1,5 @@
+@import '../config/_config.scss';
+
 .page_main_content {
     font-family: 'Roboto', sans-serif;
 }
@@ -16,7 +18,7 @@ hr {
 }
 
 .page_register_section {
-    background-color: rgba(240, 240, 240, 0.7);
+    background-color: $lighter;
 }
 
 .page_register_text {
@@ -72,7 +74,7 @@ hr {
 
 .page_register_form {
     position: relative;
-    background: #FFFFFF;
+    background: #f8e7e0;
     max-width: 360px;
     margin: 0 auto 55px;
     padding: 0.25em 20px 1.25em 20px;   
@@ -90,7 +92,7 @@ hr {
     text-transform: uppercase;
     font-size: 8px;
     font-weight: bold;
-    color: #6b6b6b;
+    color: $darkBrown;
     &_italic {
         font-style: italic;
     }
@@ -112,7 +114,7 @@ hr {
     input {
         width: 100%;
         outline: 0;
-        background: #f2f2f2;
+        background: $lighter;
         border: 0;
         padding-top: 40px;
         box-sizing: border-box;
@@ -125,12 +127,12 @@ hr {
 select {
     outline: 0;
     border: none;
-    background: #f2f2f2;
+    background: $lighter;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0 0 0 .5em;
-    color: #6b6b6b;
+    color: $darkBrown;
     cursor: pointer;
 }
 
@@ -140,7 +142,7 @@ select {
     width: 100%;
     height: 3em;
     line-height: 3;
-    background: #f2f2f2;
+    background: $lighter;
     overflow: hidden;
     border-radius: .25em;
 }
@@ -156,13 +158,13 @@ select::-ms-expand {
     right: 0;
     bottom: 0;
     padding: 0 1em;
-    background: #f2f2f2;
-    color: #807f7f;
+    background: $lighter;
+    color: $darkBrown;
     pointer-events: none;
 }
 /* Transition */
 .page_register_form_select:hover::after {
-    color: #4CAF50;
+    color: $button;
 }
 .page_register_form_select::after {
     -webkit-transition: .25s all ease;
@@ -172,7 +174,7 @@ select::-ms-expand {
 
 .page_register_form button {
     outline: 0;
-    background: #4CAF50;
+    background: $button;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -181,9 +183,11 @@ select::-ms-expand {
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+    transition: all 200ms ease-in;
 }
 .page_register_form button:hover,.form button:active,.form button:focus {
-    background: #43A047;
+    background: $light;
+    color: $darkBrown;
 }
 .page_register_form .page_register_form_link {
     margin: 15px 0 0;
@@ -191,7 +195,7 @@ select::-ms-expand {
     text-align: center;
 }
 .page_register_form .page_register_form_link a {
-    color: #4CAF50;
+    color: $darkBrown;
     text-decoration: none;
 }
 
@@ -230,7 +234,6 @@ select::-ms-expand {
 .page_send_content {
     text-align: center;
     position: relative;
-    background: #fff;
     max-width: 360px;
     margin: 0 auto .5em auto;
 }
@@ -240,13 +243,6 @@ select::-ms-expand {
     margin-bottom: 1em;
     width: 100%;
 }
-
-$background: #f5f6fa;
-$text: #9c9c9c;
-$input-bg-color: #fff;
-$input-text-color: #a3a3a3;
-$button-bg-color: #7f8ff4;
-$button-text-color: #fff;
 
 .page_send_container {
 	display: flex;
@@ -260,11 +256,11 @@ $button-text-color: #fff;
     width: 100%;
 	&_field {
         width: 66%;
-		background: #fff;
-		color: $input-text-color;
+		background: $lighter;
+		color: $darkBrown;
 		font: inherit;
 		box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
-		border: 0;
+		border: 20px;
 		outline: 0;
         padding: 22px 0px 22px 10px;
 	}
@@ -283,18 +279,19 @@ $button-text-color: #fff;
 	cursor: pointer;
 	
 	&--primary {
-		background: $button-bg-color;
-		color: $button-text-color;
+		background: $button;
+		color: white;
 		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
 		border-radius: 2px;
 		padding: 22px 0px;
 		
 		&:hover {
-			background: darken($button-bg-color, 4%);
+			background: $light;
+            color: $darkBrown;
 		}
 		
 		&:active {
-			background: $button-bg-color;
+			background: $button;
 			box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
 		}
 	}
