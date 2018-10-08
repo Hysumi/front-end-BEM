@@ -33,71 +33,63 @@ header {
     background-color: white;
     padding: .4em 1em;
     height: 100%;
-}
+    &_positionLeft, &_positionRight {
+        border: none;
+    }
+    &_positionLeft {
+        float: left;
+        border-right: thin solid silver;
+    }
+    &_positionRight {
+        float: right;
+        border-left: thin solid silver;
+    }
 
-.header_button, 
-.header_button_text_left,
-.header_button_text_right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    &_textLeft, &_textRight, & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.header_button_icon {
-    height: 30px;
-    width: 30px;
-    margin: 0.5em;
-}
-.header_button_phone {
-    display: none;
-}
+    &_textLeft[button_text-mobile]:after,
+    &_textRight[button_text-mobile]:after {
+        content: attr(button_text-mobile);
+    }
 
-.header_button_position-right, 
-.header_button_position_left{
-    border: none;
-}
-
-.header_button_position_left {
-    float: left;
-    border-right: thin solid silver;
-}
-
-.header_button_position-right {
-    float: right;
-    border-left: thin solid silver;
-}
-
-.header_button_text_left[button_text-mobile]::after,
-.header_button_text_right[button_text-mobile]::after {
-    content: attr(button_text-mobile);
+    &_icon {
+        height: 30px;
+        width: 30px;
+        margin: 0.5em;
+    }
+    
+    &_phone {
+        display: none;
+    }
 }
 
 @media all and (min-width : 768px) {
-    .header_button, 
-    .header_button_text_left,
-    .header_button_text_right{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .header_button_text_left[button_text]::after {
-        content: attr(button_text);
-    }
+    .header_button {
+        &_textLeft, &_textRight, & {
+            flex-direction: row;
+        }
+        &_textLeft[button_text]:after {
+            content: attr(button_text);
+        }
 
-    .header_button_text_right[button_text]::before  {
-        content: attr(button_text);
-    }
-    .header_button_text_right[button_text]::after  {
-        content: '';
-    }
+        &_textRight[button_text]:before  {
+            content: attr(button_text);
+        }
 
-    .header_button_phone {
-        display: flex;
-    }
-    
-    .header_button_phone,
-    .header_button_position-right {
-        border: none;
+        &_textRight[button_text]:after {
+            content: '';
+        }
+
+        &_phone {
+            display: flex;
+        }
+
+        &_phone, &_positionRight {
+            border: none;
+        }
     }
 }
