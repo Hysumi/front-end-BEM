@@ -8,7 +8,8 @@
     padding: 0 2em;
 }
 
-.page_register_content {
+.page_register_content,
+.page_social_content {
     margin: 15px;
 }
 
@@ -70,11 +71,10 @@
 
 .page_register_form {
     position: relative;
-    z-index: 1;
     background: #FFFFFF;
     max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 0.25em 45px 1.25em 45px;   
+    margin: 0 auto 55px;
+    padding: 0.25em 20px 1.25em 20px;   
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -181,14 +181,46 @@ select::-ms-expand {
 .page_register_form button:hover,.form button:active,.form button:focus {
     background: #43A047;
 }
-.page_register_form .message {
+.page_register_form .page_register_form_link {
     margin: 15px 0 0;
     font-size: 12px;
     text-align: center;
 }
-.page_register_form .message a {
+.page_register_form .page_register_form_link a {
     color: #4CAF50;
     text-decoration: none;
+}
+
+.page_social_container {
+    display: flex;
+    width: 100%;
+}
+.page_social_media_container,
+.page_social_email_container{
+    display: inline-block;
+    margin: 0 auto;
+}
+.page_social_email_grid {
+    display: grid;
+    column-gap: .2em;
+    grid-template-columns: 50px 50px;  
+}
+.page_social_media_grid {
+    display: grid;
+    grid-template-columns: 35px 35px 35px;  
+    column-gap: .2em;
+}
+
+.page_social_email_grid_title {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    text-align: start;
+}
+.page_social_grid_icon {
+    text-decoration: none;
+    & svg {
+        margin: 0;
+    }
 }
 
 @media all and (max-width : 330px) {
