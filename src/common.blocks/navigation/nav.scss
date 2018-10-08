@@ -72,7 +72,7 @@
         padding: 10px 20px;
         text-decoration: none;
         word-wrap: break-word;
-        transition: all 200ms ease-in;
+        @include transition(.25s all ease);
     }
     &_list_item &_list_item &_link,
     &_list_item &_list_item {

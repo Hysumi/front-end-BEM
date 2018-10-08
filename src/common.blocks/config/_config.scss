@@ -7,3 +7,10 @@ $dark: #201718;
 
 $socialColorBackground: white;
 $paymentCardsBackground: white;
+
+
+@mixin transition ($e) {
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    transition: $e;
+}
