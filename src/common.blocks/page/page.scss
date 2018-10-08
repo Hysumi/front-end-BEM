@@ -1,21 +1,19 @@
-.page_main_content {
-    //display: flex;
-    //flex-direction: column;
+hr {
+    display: none;
 }
-
 .page_title_section {
     margin: 0 auto;
     padding: 0 2em;
 }
 
 .page_register_content,
+.page_social,
 .page_social_content {
     margin: 15px;
 }
 
 .page_register_section {
     background-color: rgba(240, 240, 240, 0.7);
-    //display: flex; colocar quando for max> 500
 }
 
 .page_register_text {
@@ -194,7 +192,7 @@ select::-ms-expand {
     text-decoration: none;
 }
 
-.page_social_container {
+.page_social_email {
     display: flex;
     width: 100%;
 }
@@ -231,8 +229,7 @@ select::-ms-expand {
     position: relative;
     background: #fff;
     max-width: 360px;
-    margin: 0 auto 55px;
-    padding: .25em 20px 1.25em 20px;
+    margin: 0 auto .5em auto;
 }
 
 .page_send_content_input{
@@ -311,14 +308,21 @@ $button-text-color: #fff;
 }
 
 @media all and (min-width : 768px) {
+    hr {
+        display: block;
+    }
     .page_title_section {    
         padding: 0px 6em;
         max-width: 600px;
         margin: 0 auto 0 0;
     }
+
+    .page_register_section,
+    .page_social_section {
+        padding: 0 2.5em;
+    }
     .page_register_section {
         display: flex;
-        padding: 0 2.5em;
     }
     .page_register_form_container {
         transform: translateY(50%);
@@ -327,5 +331,25 @@ $button-text-color: #fff;
 
     .page_register_form_title {
         font-size: 12px;
+    }
+
+    .page_social {
+        margin: 120px 30px 0 30px;  
+    }
+
+    .page_social_content {
+        padding-top: 15px;
+        max-width: 360px;
+        margin: 0 auto;
+        padding: .5em;
+        width: 100%;
+    }
+
+    .page_social_container {
+        display: flex;
+    }
+    
+    .page_send_content {
+        margin: 0;
     }
 }
