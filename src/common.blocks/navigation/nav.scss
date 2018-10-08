@@ -1,5 +1,10 @@
 @import '../config/_config.scss';
 
+.sticky {
+    top: 0;
+    position: fixed;
+}
+
 .navigation_bar {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -11,104 +16,97 @@
     position: -webkit-sticky;
     position: sticky;
     z-index: 1;
-}
 
-.sticky {
-    top: 0;
-    position: fixed;
-}
+    &_label {
+        color: #fff;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: inherit;
+        cursor: pointer;
+        width: auto;
+        margin-right: 20px;
+        float: right;
 
-.navigation_bar_label {
-    color: #fff;
-    display: block;
-    padding: 10px 0;
-    text-align: center;
-    text-transform: uppercase;
-    width: inherit;
-    cursor: pointer;
-    width: auto;
-    margin-right: 20px;
-    float: right;
-}
+        &_down {
+            border: solid white;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            margin-bottom: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    }
 
-.navigation_bar_label_down {
-    border: solid white;
-    border-width: 0 1px 1px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-bottom: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
+    &_list {
+        background-color: $main;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        &_item {
+            display: block;
+        }
+    }
 
-.navigation_bar_list {
-    background-color: $main;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-}
+    &_list,  [id^='toggle'] {
+        display: none;
+    }
+    
+    [id^='toggle']:checked + &_list {
+        display: inline-block;
+    }
 
-.navigation_bar_list, [id^='toggle'] {
-    display: none;
-}
+    &_item {
+        display: inline-block;    
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 
-[id^='toggle']:checked + .navigation_bar_list {
-    display: inline-block;
-}
+    &_link {
+        color: #fff;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        word-wrap: break-word;
+        transition: all 200ms ease-in;
+    }
+    &_list_item &_list_item &_link,
+    &_list_item &_list_item {
+        padding: 10px 10px 10px 30px;
+    }
 
-.navigation_bar_item {
-    display: inline-block;    
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.navigation_bar_list_item {
-    display: block;
-}
-
-.navigation_bar_link{
-    color: #fff;
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    word-wrap: break-word;
-}
-
-.navigation_bar_list_item .navigation_bar_list_item .navigation_bar_link,
-.navigation_bar_list_item .navigation_bar_list_item {
-    padding: 10px 10px 10px 30px;
-}
-
-.navigation_bar_link:hover,
-.navigation_bar_link:active :hover {
-    background: #666;
+    &_link:hover,
+    &_link:active:hover {
+        background: $light;
+        color: $darkBrown;
+    }
 }
 
 @media all and (min-width : 900px) {
     .navigation_bar {
         text-align: center;
-    }
-    .navigation_bar > .navigation_bar_label {
-        display: none;
-    }
+        &_label {
+            display: none;
+        }
 
-    .navigation_bar > .navigation_bar_list {
-        display: inline-block;
-        width: auto;
-    }
-
-    .navigation_bar > .navigation_bar_list > .navigation_bar_list_item {
-        display: inline-block;
-        position: relative;
-    }
-
-    .navigation_bar_list_item .navigation_bar_list {
-        position: absolute;
-    }
-
-    .navigation_bar_list_item .navigation_bar_list_item .navigation_bar_link,
-    .navigation_bar_list_item .navigation_bar_list_item {
-        padding: 10px 20px;
+        &_list {
+            display: inline-block;
+            width: auto;
+            &_item {
+                display: inline-block;
+                position: relative;
+            }
+        }
+        &_list_item &_list {
+            position: absolute;
+        }
+        &_list_item &_list_item &_link,
+        &_list_item &_list_item {
+            padding: 10px 20px;
+        }
     }
 }
